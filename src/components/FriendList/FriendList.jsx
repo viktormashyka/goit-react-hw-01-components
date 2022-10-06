@@ -1,3 +1,5 @@
+import appBar from './AppBar';
+
 export const Friendlist = ({ friendlist }) => {
   return (
     <ul class="friend-list">

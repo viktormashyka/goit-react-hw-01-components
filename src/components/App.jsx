@@ -7,6 +7,8 @@ import friends from '../friends.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import transactions from '../transactions.json';
 
+//TODO PropTypes and Styles
+
 export const App = () => {
   return (
     <div>
@@ -17,5 +19,3 @@ export const App = () => {
     </div>
   );
 };
-
-console.log(data);
