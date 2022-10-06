@@ -1,7 +1,7 @@
-export const Friendlist = ({ friends }) => {
+export const Friendlist = ({ friendlist }) => {
   return (
     <ul class="friend-list">
-      {friends.map(friend => (
+      {friendlist.map(friend => (
         <li class="item" key={friend.id}>
           <span class="status">{friend.isOnline}</span>
           <img
