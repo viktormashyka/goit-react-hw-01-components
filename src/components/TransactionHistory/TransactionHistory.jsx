@@ -1,23 +1,33 @@
+import {
+  Wrapper,
+  TransactionTable,
+  TableHead,
+  TableBody,
+  TableRow,
+} from 'components/TransactionHistory/TransactionHistory.styled';
+
 export const TransactionHistory = ({ items }) => {
   return (
-    <table class="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
-
-      {items.map(item => (
-        <tbody key={item.id}>
+    <Wrapper>
+      <TransactionTable class="transaction-history">
+        <TableHead>
           <tr>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
           </tr>
-        </tbody>
-      ))}
-    </table>
+        </TableHead>
+
+        {items.map(item => (
+          <TableBody key={item.id}>
+            <TableRow>
+              <td>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
+            </TableRow>
+          </TableBody>
+        ))}
+      </TransactionTable>
+    </Wrapper>
   );
 };

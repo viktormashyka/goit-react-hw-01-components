@@ -1,3 +1,5 @@
+import { Wrapper } from './Profile.styled';
+
 export const Profile = ({
   profile: {
     username,
@@ -8,7 +10,7 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div class="profile">
+    <Wrapper class="profile">
       <div class="description">
         <img src={avatar} alt="User avatar" class="avatar" />
         <p class="name">{username}</p>
@@ -30,6 +32,6 @@ export const Profile = ({
           <span class="quantity">{likes}</span>
         </li>
       </ul>
-    </div>
+    </Wrapper>
   );
 };
