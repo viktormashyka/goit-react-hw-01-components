@@ -10,8 +10,10 @@ export const Wrapper = styled.div`
 export const StatBox = styled.section`
   display: block;
   border: 1px solid ${p => p.theme.colors.black};
+  border-radius: 4px;
   width: 400px;
   height: auto;
+  margin-left: 40px;
 `;
 
 export const Title = styled.h2`
@@ -21,7 +23,7 @@ export const Title = styled.h2`
 
 export const StatList = styled.ul`
   display: flex;
-  width: 100%;
+  width: auto;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -29,11 +31,10 @@ export const StatList = styled.ul`
 
 export const StatItem = styled.li`
   display: block;
-  align-items: center;
-  justify-content: center;
   width: 80px;
-  height: 80px;
-  padding: 4px;
+  height: 50px;
+  padding: 5px;
   border: 1px solid ${p => p.theme.colors.black};
+  border-radius: 4px;
   }
 `;

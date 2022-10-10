@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const FriendsList = styled.ul`
   display: block;
-  max-width: 100%;
+  width: auto;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ export const FriendsList = styled.ul`
 export const FriendsItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 200px;
   height: auto;
   padding: 4px;

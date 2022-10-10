@@ -12,7 +12,7 @@ export const TransactionTable = styled.table`
   border-radius: 4px;
   width: 700px;
   height: auto;
-  //   background-color: tomato;
+  margin-left: 40px;
 `;
 
 export const TableHead = styled.thead`
@@ -24,10 +24,8 @@ export const TableHead = styled.thead`
 export const TableBody = styled.tbody`
   border: 1px solid ${p => p.theme.colors.black};
   text-align: center;
-  //   background-color: tomato;
 `;
 
 export const TableRow = styled.tr`
   border: 1px solid ${p => p.theme.colors.black};
-  //   background-color: tomato;
 `;

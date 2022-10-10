@@ -9,6 +9,8 @@ const theme = {
     black: 'black',
     white: 'white',
     accent: 'tomato',
+    onLine: 'green',
+    offLine: 'red',
   },
 };
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import {
   Wrapper,
   TransactionTable,
-  TableHead,
-  TableBody,
-  TableRow,
 } from 'components/TransactionHistory/TransactionHistory.styled';
+import { TableHead } from 'components/TransactionHistory/TransactionHistory.styled';
+import { TableBody } from 'components/TransactionHistory/TransactionHistory.styled';
+import { TableRow } from 'components/TransactionHistory/TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -30,4 +31,11 @@ export const TransactionHistory = ({ items }) => {
       </TransactionTable>
     </Wrapper>
   );
+};
+
+TransactionHistory.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
 };

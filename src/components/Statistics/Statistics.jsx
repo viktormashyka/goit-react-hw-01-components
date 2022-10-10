@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StatBox,
   StatItem,
@@ -24,4 +25,10 @@ export const Statistics = ({ statistics }) => {
       </StatBox>
     </Wrapper>
   );
+};
+
+Statistics.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };
