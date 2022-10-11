@@ -10,7 +10,11 @@ export const Friendlist = ({ friendlist }) => {
         {friendlist.map(friend => (
           <FriendsItem class="item" key={friend.id}>
             <span class="status">
-              {friend.isOnline ? <AiFillEye /> : <AiFillEyeInvisible />}
+              {friend.isOnline ? (
+                <AiFillEye style={{ color: 'green' }} />
+              ) : (
+                <AiFillEyeInvisible style={{ color: 'red' }} />
+              )}
             </span>
             <img
               class="avatar"
@@ -27,8 +31,12 @@ export const Friendlist = ({ friendlist }) => {
 };
 
 Friendlist.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
-  id: PropTypes.number,
+  friendlist: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+      isOnline: PropTypes.bool,
+      id: PropTypes.number,
+    })
+  ),
 };
