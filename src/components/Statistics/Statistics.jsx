@@ -7,18 +7,17 @@ import {
   Wrapper,
 } from './Statistics.styled';
 
-export const Statistics = ({ statistics }) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <Wrapper>
-      <StatBox class="statistics">
-        <Title class="title">Upload stats</Title>
-
-        <StatList class="stat-list">
-          {statistics.map(stat => (
-            <StatItem class="item" key={stat.id}>
-              <span class="label">{stat.label}</span>
+      <StatBox className="statistics">
+        {title.length && <Title className="title"> {title} </Title>}
+        <StatList className="stat-list">
+          {stats.map(stat => (
+            <StatItem className="item" key={stat.id}>
+              <span className="label">{stat.label}</span>
               <br />
-              <span class="percentage">{stat.percentage}%</span>
+              <span className="percentage">{stat.percentage}%</span>
             </StatItem>
           ))}
         </StatList>
@@ -28,7 +27,12 @@ export const Statistics = ({ statistics }) => {
 };
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
 };

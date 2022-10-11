@@ -1,4 +1,3 @@
-// import { StatsList } from 'components/Statistics/Statistics.styled';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`

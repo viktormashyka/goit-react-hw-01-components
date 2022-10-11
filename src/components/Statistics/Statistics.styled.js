@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomHexColor } from './getRandomHexColor';
 
 export const Wrapper = styled.div`
   padding: 8px;
@@ -36,5 +37,6 @@ export const StatItem = styled.li`
   padding: 5px;
   border: 1px solid ${p => p.theme.colors.black};
   border-radius: 4px;
+  background-color: ${getRandomHexColor}
   }
 `;
