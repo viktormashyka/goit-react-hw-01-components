@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import { FriendsItem, Wrapper } from './FriendList.styled';
-import { FriendsList } from './FriendList.styled';
+import { Wrapper, FriendsList, FriendsItem } from './FriendList.styled';
 
 export const Friendlist = ({ friendlist }) => {
   return (

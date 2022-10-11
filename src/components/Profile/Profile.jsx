@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import { Wrapper } from './Profile.styled';
-import { ProfileCard } from './Profile.styled';
-import { StatsList } from './Profile.styled';
-import { CardDescription } from './Profile.styled';
-import { StatsItem } from './Profile.styled';
+import {
+  Wrapper,
+  ProfileCard,
+  StatsList,
+  CardDescription,
+  StatsItem,
+} from './Profile.styled';
 
 export const Profile = ({
-  profile: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
 }) => {
   return (
     <Wrapper>
@@ -20,7 +20,7 @@ export const Profile = ({
         <CardDescription class="description">
           <img src={avatar} alt="User avatar" class="avatar" width="100px" />
           <p class="name">{username}</p>
-          <p class="tag">{tag}</p>
+          <p class="tag">@{tag}</p>
           <p class="location">{location}</p>
         </CardDescription>
 
@@ -47,9 +47,13 @@ export const Profile = ({
 };
 
 Profile.propTypes = {
-  username: PropTypes.string,
+  username: PropTypes.string.isRequired,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
+  likes: PropTypes.objectOf({
+    followers: PropTypes.number,
+    views: PropTypes.number,
     likes: PropTypes.number,
+  }),
 };
