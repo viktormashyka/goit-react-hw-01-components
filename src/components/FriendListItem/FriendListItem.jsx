@@ -1,23 +1,18 @@
-// import PropTypes from 'prop-types';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import {
-  Wrapper,
-  FriendsList,
-  FriendsItem,
-} from '../FriendListItem/FriendListItem.styled';
+import { FriendsItem } from '../FriendListItem/FriendListItem.styled';
 
-export const FriendlistItem = ({ avatar, name, isOnline, id }) => {
+export const FriendlistItem = ({ avatar, name, isOnline }) => {
   return (
-    <FriendsItem class="item" key={id}>
-      <span class="status">
+    <FriendsItem className="item">
+      <span className="status">
         {isOnline ? (
           <AiFillEye style={{ color: 'green' }} />
         ) : (
           <AiFillEyeInvisible style={{ color: 'red' }} />
         )}
       </span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+      <img className="avatar" src={avatar} alt="User avatar" width="48" />
+      <p className="name">{name}</p>
     </FriendsItem>
   );
 };
